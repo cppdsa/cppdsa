@@ -5,7 +5,7 @@ void insertionSort(vector<int> &A) {
     int l = A.size();
     for (int i = l - 1; i >= 0; --i) {
         int pos = i, temp = A[i];
-        while (pos + 1 < l && A[pos] > A[pos + 1]) swap(A[pos], A[pos++]);
+        while (pos + 1 < l && A[pos + 1] < temp) A[pos] = A[++pos];
         A[pos] = temp;
     }
     return;
